@@ -34,24 +34,24 @@
 </head>
 <body>
   <!-- Skip to content for keyboard/screen reader users -->
-  <a href="#about" class="skip-link">Skip to content</a>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
   <!-- Navigation -->
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
+  <nav class="navbar" aria-label="Main navigation">
     <div class="nav-container">
       <a href="#" class="nav-logo" aria-label="Back to top">Zeng</a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks" role="list">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-right">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode">
           <span class="theme-icon-light" aria-hidden="true">🌙</span>
           <span class="theme-icon-dark" aria-hidden="true">☀️</span>
         </button>
-        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -67,7 +67,7 @@
       <p class="hero-subtitle">10 years of experience in logistics and operations · Transitioning into freelance project management</p>
       <div class="hero-buttons">
         <a href="#contact" class="btn btn-primary">Get in Touch</a>
-        <a href="#about" class="btn btn-outline">Learn More</a>
+        <a href="#about" class="btn btn-outline">Learn More About Me</a>
         <a href="resume.html" target="_blank" rel="noopener" class="btn btn-resume">
           <span aria-hidden="true">📄</span> View Resume
         </a>
@@ -79,6 +79,7 @@
     </div>
   </header>
 
+  <main id="main-content">
   <!-- About Section -->
   <section class="section" id="about">
     <div class="container">
@@ -211,25 +212,28 @@
         </div>
 
         <!-- Contact Form -->
-        <form class="contact-form" id="contactForm" novalidate>
+        <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
           <h3 class="form-title">Send me a message</h3>
           <div class="form-group">
-            <label for="name">Name <span class="required" aria-hidden="true">*</span></label>
-            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name">
-            <span class="form-error" id="nameError" role="alert"></span>
+            <label for="name">Name <span class="required" aria-hidden="true">*</span> <span class="sr-only">(required)</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name"
+              aria-describedby="nameError" aria-invalid="false">
+            <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
           </div>
           <div class="form-group">
-            <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
-            <input type="email" id="email" name="email" required autocomplete="email" placeholder="your@email.com">
-            <span class="form-error" id="emailError" role="alert"></span>
+            <label for="email">Email <span class="required" aria-hidden="true">*</span> <span class="sr-only">(required)</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="your@email.com"
+              aria-describedby="emailError" aria-invalid="false">
+            <span class="form-error" id="emailError" role="alert" aria-live="polite"></span>
           </div>
           <div class="form-group">
-            <label for="message">Message <span class="required" aria-hidden="true">*</span></label>
-            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or opportunity..."></textarea>
-            <span class="form-error" id="messageError" role="alert"></span>
+            <label for="message">Message <span class="required" aria-hidden="true">*</span> <span class="sr-only">(required)</span></label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or opportunity..."
+              aria-describedby="messageError" aria-invalid="false"></textarea>
+            <span class="form-error" id="messageError" role="alert" aria-live="polite"></span>
           </div>
           <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
-          <div class="form-success" id="formSuccess" role="status" hidden>
+          <div class="form-success" id="formSuccess" role="status" aria-live="polite" hidden>
             <span aria-hidden="true">✅</span> Thanks! Your message has been sent. I'll get back to you soon.
           </div>
         </form>
@@ -237,8 +241,10 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <p>&copy; 2026 Zeng. Built with passion and a growth mindset.</p>
     </div>

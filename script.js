@@ -13,21 +13,24 @@ themeToggle.addEventListener('click', () => {
   if (isDark) {
     document.documentElement.removeAttribute('data-theme');
     localStorage.setItem('theme', 'light');
+    themeToggle.setAttribute('aria-label', 'Switch to dark mode');
   } else {
     document.documentElement.setAttribute('data-theme', 'dark');
     localStorage.setItem('theme', 'dark');
+    themeToggle.setAttribute('aria-label', 'Switch to light mode');
   }
 });
 
 // ===== Mobile Navigation Toggle =====
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
 
 navToggle.addEventListener('click', () => {
   navToggle.classList.toggle('active');
   navLinks.classList.toggle('active');
   const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-  navToggle.setAttribute('aria-expanded', !expanded);
+  navToggle.setAttribute('aria-expanded', String(!expanded));
+  navToggle.setAttribute('aria-label', expanded ? 'Open menu' : 'Close menu');
 });
 
 // Close mobile menu when a link is clicked
@@ -35,6 +38,8 @@ navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navToggle.classList.remove('active');
     navLinks.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Open menu');
   });
 });
 
@@ -87,6 +92,7 @@ if (contactForm) {
     const msg = validators[field](input.value);
     if (error) error.textContent = msg;
     if (group) group.classList.toggle('error', !!msg);
+    input.setAttribute('aria-invalid', msg ? 'true' : 'false');
     return !msg;
   }
 
