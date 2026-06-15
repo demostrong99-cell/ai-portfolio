@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "resume-server": {
+      "command": "/Users/Zeng/PythonProj/xiaomi/claude-learning/personal-website/.venv/bin/python",
+      "args": ["/Users/Zeng/PythonProj/xiaomi/claude-learning/personal-website/mcp_server.py"]
+    }
+  }
+}
