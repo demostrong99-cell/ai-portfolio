@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-06-15T13:34:09.100349",
+  "scores": {
+    "seo": 66.66666666666666,
+    "accessibility": 100.0,
+    "performance": 75.0,
+    "features": 100.0,
+    "overall": 85.41666666666666
+  },
+  "details": {
+    "seo": {
+      "has_meta_description": true,
+      "has_og_tags": true,
+      "has_twitter_card": true,
+      "has_canonical": false,
+      "has_favicon": true,
+      "has_structured_data": false
+    },
+    "accessibility": {
+      "has_skip_link": true,
+      "has_aria_labels": true,
+      "has_main_landmark": true,
+      "has_nav_landmark": true,
+      "has_footer_landmark": true,
+      "has_form_labels": true,
+      "has_aria_live": true
+    },
+    "performance": {
+      "has_preconnect": true,
+      "has_font_display": true,
+      "has_loading_lazy": false,
+      "has_meta_viewport": true
+    },
+    "features": {
+      "dark_mode": true,
+      "responsive": true,
+      "form_validation": true,
+      "scroll_animation": true,
+      "local_storage": true
+    }
+  }
+}
