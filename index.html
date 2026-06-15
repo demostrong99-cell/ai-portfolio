@@ -3,17 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
   <title>Zeng — Project Coordinator & Operations Specialist</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Freelance project coordinator and operations specialist with 10 years of logistics experience. Available for project management and operations consulting.">
+  <meta name="author" content="Zeng">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Zeng — Project Coordinator & Operations Specialist">
+  <meta property="og:description" content="Freelance project coordinator and operations specialist with 10 years of logistics experience.">
+  <meta property="og:url" content="https://your-domain.com">
+  <meta property="og:image" content="https://your-domain.com/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zeng — Project Coordinator & Operations Specialist">
+  <meta name="twitter:description" content="Freelance project coordinator and operations specialist with 10 years of logistics experience.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%232563eb'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>Z</text></svg>">
+
+  <!-- Fonts: only 400/500/600/700 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Skip to content for keyboard/screen reader users -->
+  <a href="#about" class="skip-link">Skip to content</a>
+
   <!-- Navigation -->
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
-      <a href="#" class="nav-logo">Zeng</a>
+      <a href="#" class="nav-logo" aria-label="Back to top">Zeng</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -21,8 +47,11 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-right">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
-        <button class="nav-toggle" aria-label="Toggle menu">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <span class="theme-icon-light" aria-hidden="true">🌙</span>
+          <span class="theme-icon-dark" aria-hidden="true">☀️</span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -39,10 +68,13 @@
       <div class="hero-buttons">
         <a href="#contact" class="btn btn-primary">Get in Touch</a>
         <a href="#about" class="btn btn-outline">Learn More</a>
-        <a href="resume.html" target="_blank" class="btn btn-resume">📄 View Resume</a>
+        <a href="resume.html" target="_blank" rel="noopener" class="btn btn-resume">
+          <span aria-hidden="true">📄</span> View Resume
+        </a>
       </div>
     </div>
     <div class="hero-visual">
+      <div class="hero-avatar" aria-hidden="true">Z</div>
       <div class="hero-shape"></div>
     </div>
   </header>
@@ -93,22 +125,22 @@
       <h2 class="section-title">What I Bring</h2>
       <div class="experience-grid">
         <div class="exp-card">
-          <div class="exp-icon">📋</div>
+          <div class="exp-icon" aria-hidden="true">📋</div>
           <h3>Project Coordination</h3>
           <p>Managing cross-functional workflows, aligning stakeholders, and ensuring projects deliver on time and within scope.</p>
         </div>
         <div class="exp-card">
-          <div class="exp-icon">🤝</div>
+          <div class="exp-icon" aria-hidden="true">🤝</div>
           <h3>Stakeholder Communication</h3>
           <p>10 years of bridging gaps between teams, clients, and management — resolving conflicts and building trust under pressure.</p>
         </div>
         <div class="exp-card">
-          <div class="exp-icon">⚙️</div>
+          <div class="exp-icon" aria-hidden="true">⚙️</div>
           <h3>Operations Management</h3>
           <p>Hands-on experience in logistics operations, process optimization, and team coordination in demanding environments.</p>
         </div>
         <div class="exp-card">
-          <div class="exp-icon">🚀</div>
+          <div class="exp-icon" aria-hidden="true">🚀</div>
           <h3>Continuous Growth</h3>
           <p>Actively learning AI tools and English to stay relevant and expand my ability to serve clients globally.</p>
         </div>
@@ -163,22 +195,44 @@
         I'm open to freelance opportunities, collaborations, and conversations.
         Whether you need help coordinating a project or optimizing operations — let's talk.
       </p>
-      <div class="contact-grid">
-        <a href="mailto:your-email@example.com" class="contact-card">
-          <span class="contact-icon">✉️</span>
-          <span class="contact-label">Email</span>
-          <span class="contact-value">your-email@example.com</span>
-        </a>
-        <a href="https://linkedin.com/in/your-profile" target="_blank" class="contact-card">
-          <span class="contact-icon">💼</span>
-          <span class="contact-label">LinkedIn</span>
-          <span class="contact-value">Connect with me</span>
-        </a>
-        <a href="https://github.com/your-username" target="_blank" class="contact-card">
-          <span class="contact-icon">💻</span>
-          <span class="contact-label">GitHub</span>
-          <span class="contact-value">Check out my work</span>
-        </a>
+      <div class="contact-layout">
+        <!-- Contact Info Cards -->
+        <div class="contact-cards">
+          <a href="mailto:your-email@example.com" class="contact-card">
+            <span class="contact-icon" aria-hidden="true">✉️</span>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">your-email@example.com</span>
+          </a>
+          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-icon" aria-hidden="true">💼</span>
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">Connect with me</span>
+          </a>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contactForm" novalidate>
+          <h3 class="form-title">Send me a message</h3>
+          <div class="form-group">
+            <label for="name">Name <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name">
+            <span class="form-error" id="nameError" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="your@email.com">
+            <span class="form-error" id="emailError" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message <span class="required" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or opportunity..."></textarea>
+            <span class="form-error" id="messageError" role="alert"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+          <div class="form-success" id="formSuccess" role="status" hidden>
+            <span aria-hidden="true">✅</span> Thanks! Your message has been sent. I'll get back to you soon.
+          </div>
+        </form>
       </div>
     </div>
   </section>
